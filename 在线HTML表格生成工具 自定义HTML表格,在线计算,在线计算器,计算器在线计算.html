@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://www.osgeo.cn/app/sc909 -->
+<html lang="zh-cmn-Hans"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="OSGeo China Chapter">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="www.osgeo.cn">
+<meta name="Copyright" content="www.osgeo.cn">
+<link rel="icon" href="http://www.osgeo.cn/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.osgeo.cn/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+<script type="text/javascript" async="" defer="" src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/piwik.js.下载"></script><script async="" src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/analytics.js.下载"></script><script src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/jquery-3.1.1.min.js.下载"></script>
+<script src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/bootstrap.min.js.下载"></script>
+<script src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/jquery.validate.min.js.下载"></script>
+<script src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/jquery.magnific-popup.min.js.下载"></script>
+<link href="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/style.css" rel="stylesheet" type="text/css">
+<script src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/leaflet.js.下载"></script>
+<link rel="stylesheet" href="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/leaflet.css">
+
+
+
+
+<title>在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算</title>
+<meta name="keywords" content="HTML表格,在线生成,自定义,在线计算,在线计算器,计算器在线计算">
+<link rel="stylesheet" href="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/star-rating.css" type="text/css" media="all">
+<link rel="stylesheet" href="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/pure-min.css" type="text/css" media="all">
+<script type="text/javascript" src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/star-rating.js.下载"></script>
+<script type="text/javascript">
+var post_uid = "sc909";
+$(document).ready(function () {
+var runid = "";
+if (runid == "") {
+}
+else {
+$.ajax({
+url: '/calcinfo/' + runid,
+type: 'GET',
+data: '',
+dataType: 'html',
+timeout: 1000,
+error: function () {
+alert('出现未知错误');
+},
+success: function (result) {
+res = $.parseJSON(result);
+$("#calc_form").find('input').each(function (i) {
+var a = $(this).attr("id");
+$("#" + a).val(res[a]);
+});
+}
+});
+}
+$.ajax({
+url: '/py/sc909/93dbe230-ef09-11e7-9ccc-00163e042936',
+type: 'GET',
+data: '',
+dataType: 'html',
+timeout: 1000,
+error: function () {
+alert('出现未知错误');
+},
+success: function (result) {
+res = $.parseJSON(result);
+$('#pycode').html(res['html']);
+}
+});
+$('#run_btn').dblclick(function () {
+$.ajax({
+url: '/calcinfo/sc909',
+type: 'POST',
+data: $('#calc_form').serialize(),
+dataType: 'html',
+timeout: 1000,
+error: function () {
+// alert('Error loading PHP document');
+},
+success: function (result) {
+}
+});
+});
+$('#act_collect').click(function () {
+$.ajax({
+url: "/collect/sc909",
+type: 'GET',
+cache: false,
+data: {},
+dataType: 'html',
+timeout: 1000,
+error: function () {
+alert('请登陆后进行收藏！')
+},
+success: function (result) {
+$('#text_collect').text('成功收藏');
+$('#text_collect').css('color', 'red');
+}
+});
+});
+$('#act_eval0').click(function () {
+$.ajax({
+url: '/evaluate/sc909/0',
+type: 'GET',
+cache: false,
+data: {},
+dataType: 'html',
+timeout: 1000,
+error: function () {
+alert('请登陆后进行评价！')
+},
+success: function (result) {
+result = JSON.parse(result);
+$('#eval0').text(result['eval0']);
+$('#eval1').text(result['eval1']);
+}
+});
+});
+$('#act_eval1').click(function () {
+$.ajax({
+url: '/evaluate/sc909/1',
+type: 'GET',
+cache: false,
+data: {},
+dataType: 'html',
+timeout: 1000,
+error: function () {
+alert('请登陆后进行评价！')
+},
+success: function (result) {
+result = JSON.parse(result);
+$('#eval0').text(result['eval0']);
+$('#eval1').text(result['eval1']);
+}
+});
+});
+});
+</script>
+ 
+
+<style>
+.label, .label-default {
+line-height: 24px;
+}
+</style>
+<script src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/share.js.下载"></script><link rel="stylesheet" href="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/share_style0_16.css"><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><link rel="stylesheet" href="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/share_popup.css"><link rel="stylesheet" href="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/select_share.css"></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="http://www.osgeo.cn/"><span class="glyphicon glyphicon-globe"></span>OSGeo中国</a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-left">
+<li><a href="http://www.osgeo.cn/info/">信息</a></li>
+<li><a href="http://www.osgeo.cn/post/">文档</a></li>
+<li><a href="http://www.osgeo.cn/data/">数据</a></li>
+<li><a href="http://www.osgeo.cn/map/">地图</a></li>
+<li><a href="http://www.osgeo.cn/app/">App</a></li>
+<li><a href="http://www.osgeo.cn/tutorial/">教程</a></li>
+<li class="dropdown">
+<a href="http://www.osgeo.cn/page/help" class="dropdown-toggle" data-toggle="dropdown">应用
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="http://www.osgeo.cn/application/geogrid/">地理空间格网</a></li>
+</ul>
+</li>
+<li><a href="http://www.osgeo.cn/lab_zh.html">实验室</a></li>
+
+<li><a href="http://www.osgeo.cn/python.html">Python与开源GIS</a></li>
+<li class="dropdown">
+<a href="http://www.osgeo.cn/page/help" class="dropdown-toggle" data-toggle="dropdown">用户
+<b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="http://www.osgeo.cn/user_list/user_recent">最近使用</a></li>
+<li><a href="http://www.osgeo.cn/user_list/user_most">使用最多</a></li>
+<li class="divider"></li>
+<li><a href="http://www.osgeo.cn/collect/list">我的收藏</a></li>
+<li class="divider"></li>
+<li><a href="http://www.osgeo.cn/user/info">我的信息</a></li>
+
+</ul>
+</li>
+</ul>
+<form class="navbar-form navbar-right" role="form" method="post" id="find_calc" action="http://www.osgeo.cn/search/">
+<div class="form-group">
+<input id="keyword" name="keyword" type="text" class="form-control" placeholder="Keyword search">
+</div>
+</form>
+
+</div>
+</div>
+</div>
+
+
+<div class="container" style="margin-top: 80px;">
+
+<div class="container">
+<div class="row">
+<div class="col-md-9">
+
+<ol class="breadcrumb">
+<li>当前位置：<a href="http://www.osgeo.cn/app/">App</a></li>
+<li><a href="http://www.osgeo.cn/category/computer">计算机</a>, <a href="http://www.osgeo.cn/category/web">Web计算与工具</a></li>
+<li class="active"><a href="http://www.osgeo.cn/app/sc909">在线HTML表格生成工具 自定义HTML表格</a></li>
+</ol>
+<div class="panel panel-black">
+<div class="panel-heading">
+<h1>在线HTML表格生成工具 自定义HTML表格</h1>
+<div class="container" style="margin:0 auto;">
+<div class="row">
+<div class="col-md-12" style="text-align: left">
+<span style="">分类:</span>
+<span class="post_cat"><a data-inline="true" href="http://www.osgeo.cn/tag/computer" class="tag1">计算机</a><a data-inline="true" href="http://www.osgeo.cn/tag/web" class="tag2">Web计算与工具</a></span>
+<span>更新时间:</span>
+<span class="">2016-10-24</span>
+<button id="act_collect" class="btn btn-info btn-xs">
+<span class="glyphicon glyphicon-heart-empty"></span>
+<span id="text_collect">收藏</span>
+</button>
+
+<div class="btn-group">
+<a href="http://www.osgeo.cn/meta_man/edit/sc909" class="btn btn-xs btn-warning">
+<span class="glyphicon glyphicon-pencil"></span>
+Help edit
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+<div class="panel-body panel-app">
+
+<div class="panel-body">
+<form method="post" action="http://www.osgeo.cn/app/sc909" class="pure-form pure-form-aligned">
+<div class="pure-control-group"><label></label> 使用以下选项快速生成HTML表格：</div>
+<div class="pure-control-group"><label><strong>表格样式</strong></label>
+<select id="tableColor" name="tableColor">
+<option value="Blue">蓝色</option>
+<option value="Green">绿色</option>
+<option value="Grey">灰色</option>
+<option value="Orange">橙色</option>
+<option value="Brown">棕色</option>
+<option value="Black">黑色</option>
+<option value="None">无色</option>
+</select>
+<select id="tableDesign" name="tableDesign">
+<option value="alternating">主题</option>
+<option value="minimal">头部</option>
+<option value="noStyle">无样式</option>
+</select> <strong>突出显示：</strong> <select id="tableHighlight" name="tableHighlight">
+<option value="row">鼠标悬念突出显示</option>
+<option value="none">无突出显示</option>
+</select>
+</div>
+<div class="pure-control-group"><label><strong>表格结构:</strong></label>
+<input type="text" id="sizeCols" name="sizeCols" value="5" size="2"> 列
+<input type="text" id="sizeRows" name="sizeRows" value="7" size="2"> 行
+<strong>单元格信息：</strong> <select id="tableInfo" name="tableInfo">
+<option value="yesInfo">加入占位符</option>
+<option value="noInfo">无信息</option>
+</select>
+</div>
+<div style="display:none;">
+<div class="pure-control-group"><label></label><strong>高级选项 [+]</strong></div>
+<div class="pure-control-group"><label></label><input type="checkbox" name="formData2" value="yes" checked="checked"> Add placeholder info
+in table cells (checked)
+</div>
+<div class="pure-control-group"><label></label><input type="checkbox" name="formHeader2" value="yes" checked="checked"> Add a table header
+</div>
+<div class="pure-control-group"><label></label><input type="checkbox" name="formFont2" value="yes"> Add
+custom font family and font sizes
+</div>
+</div>
+<div class="pure-control-group"><label></label>复制下面的HTML代码，放在网上。</div>
+<div class="pure-control-group"><label></label>
+<textarea id="newCode" name="newCode" rows="3" cols="36" onclick="javascript:this.form.newCode.focus();this.form.newCode.select();"></textarea>
+</div>
+<div class="pure-control-group"><label>你的HTML表格</label>下面显示的内容就是你选择的样式</div>
+<div id="newTable"><style type="text/css">
+table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+table.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+table.tftable tr {background-color:#d4e3e5;}
+table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+</style>
+
+<table id="tfhover" class="tftable" border="1"><tbody><tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr><tr style="background-color: rgb(212, 227, 229);"><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr><tr style="background-color: rgb(212, 227, 229);"><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr><tr style="background-color: rgb(212, 227, 229);"><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr><tr style="background-color: rgb(212, 227, 229);"><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr><tr style="background-color: rgb(212, 227, 229);"><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr><tr style="background-color: rgb(212, 227, 229);"><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr></tbody></table></div>
+</form>
+</div>
+
+</div>
+<div>
+<ul>
+
+</ul>
+</div>
+<hr>
+<div class="panel-body">
+<canvas id="pychart" style="margin:1px;" height="0px"></canvas>
+<p>注意：你选择的行和列不会在上面的演示中出现。</p>
+<p>HTML表格生成可以帮助你快速生成表格代码，生成不同样式，不同大小，不同显示风格，不同颜色的表格。你需要做的仅仅是点击相应的选项，生成后，复制并粘贴即可。</p>
+</div>
+<div class="panel-body">
+<p style="border-bottom: 1px dashed #dddddd; margin-bottom: 20px">&nbsp;</p>
+<form method="post" class="form-horizontal" id="reply_form">
+<div class="form-group">
+<div class="col-sm-10">
+Let me comment at least 50 characters | support MarkDown syntax
+<span class="red">After landing can comment！</span>
+</div>
+</div>
+<div class="form-group">
+<div class="col-sm-10">
+<textarea rows="5" name="cnt_reply" id="cnt_reply" class="form-control"></textarea>
+</div>
+</div>
+<div class="form-group">
+<div class="col-sm-10">
+<a id="btn_submit_reply" onclick="reply_it(&#39;sc909&#39;);" class="btn btn-primary btn-small">
+Submit
+</a>
+</div>
+</div>
+</form>
+<div id="pinglun"></div>
+To comment
+<p style="border-bottom: 1px dashed #dddddd; margin-bottom: 20px">&nbsp;</p>
+
+
+
+</div>
+<div class="panel-footer">
+<div class="row">
+<div class="col-md-6">
+<span style="color: #999;">label:</span>
+<span class="post_label">
+
+
+</span>
+</div>
+<div class="col-md-6" style="text-align: right;">
+<span style="">问题反馈：
+<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=1dc2dd9dab6e7068d103fe0c6d2598a7d407e503704ea62cadad73ba1ece913b">
+<img border="0" src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/group.png" alt="osgeo中国中心" title="osgeo中国中心" data-bd-imgshare-binded="1"></a>
+</span>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8" id="bwlj">
+App链接： <a href="http://www.osgeo.cn/app/sc909">在线HTML表格生成工具 自定义HTML表格</a>
+</div>
+<div class="col-md-4 ">
+<div class="widget_baidu_share"> <div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1514822221821"><a href="http://www.osgeo.cn/app/sc909#" class="bds_more" data-cmd="more"></a><a title="分享到微信" href="http://www.osgeo.cn/app/sc909#" class="bds_weixin" data-cmd="weixin"></a><a title="分享到Facebook" href="http://www.osgeo.cn/app/sc909#" class="bds_fbook" data-cmd="fbook"></a><a title="分享到linkedin" href="http://www.osgeo.cn/app/sc909#" class="bds_linkedin" data-cmd="linkedin"></a><a title="分享到Twitter" href="http://www.osgeo.cn/app/sc909#" class="bds_twi" data-cmd="twi"></a><a title="分享到邮件分享" href="http://www.osgeo.cn/app/sc909#" class="bds_mail" data-cmd="mail"></a><a title="分享到印象笔记" href="http://www.osgeo.cn/app/sc909#" class="bds_evernotecn" data-cmd="evernotecn"></a><a title="分享到打印" href="http://www.osgeo.cn/app/sc909#" class="bds_print" data-cmd="print"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","fbook","tsina","bdysc","renren","twi","tqq","bdxc","kaixin001","linkedin","evernotecn","copy","print"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["weixin","fbook","linkedin","twi","mail","evernotecn","print"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["weixin","fbook","linkedin","twi","mail","evernotecn","print"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="pycode"><script>
+$(document).ready(function () {
+var sizeCols = "";
+var sizeRows = "";
+var tableColor = "";
+var tableColor2 = "";
+var tableColor2b = "";
+var tableDesign = "";
+var tableInfo = "";
+var tableHighlight = ""
+var tableJS = "";
+var tableCSS = "";
+var tableHTML = "";
+var pageTableHTML = "";
+var tableEND = "";
+var newTable = "";
+var newTableCode = "";
+var tfHighlight = "";
+var tfHighlightb = "";
+function makeTableCode() {
+tableColor = document.getElementById('tableColor').value;
+tableDesign = document.getElementById('tableDesign').value;
+sizeCols = document.getElementById('sizeCols').value;
+sizeRows = document.getElementById('sizeRows').value;
+if (sizeCols == "0") {
+sizeCols = "5";
+document.getElementById('sizeCols').value = "5"
+}
+if (sizeRows == "0") {
+sizeRows = "7";
+document.getElementById('sizeRows').value = "7"
+}
+tableInfo = document.getElementById('tableInfo').value;
+tableHighlight = document.getElementById('tableHighlight').value;
+if (tableDesign == "alternating") {
+tableCSS = "";
+if (tableColor == "Blue") {
+var blue1 = "#acc8cc";
+var blue2 = "#d4e3e5";
+var blue3 = "#729ea5";
+tableColor2 = "#d4e3e5";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#d4e3e5;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "Green") {
+var green1 = "#abd28e";
+var green2 = "#bedda7";
+var green3 = "#9dcc7a";
+tableColor2 = "#bedda7";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #9dcc7a;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#abd28e;border-width: 1px;padding: 8px;border-style: solid;border-color: #9dcc7a;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#bedda7;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #9dcc7a;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "Grey") {
+var grey1 = "#b8b8b8";
+var grey2 = "#cdcdcd";
+var grey3 = "#a9a9a9";
+tableColor2 = "#cdcdcd";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #a9a9a9;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#b8b8b8;border-width: 1px;padding: 8px;border-style: solid;border-color: #a9a9a9;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#cdcdcd;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #a9a9a9;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "Orange") {
+var orange1 = "#e6983b";
+var orange2 = "#f0c169";
+var orange3 = "#ebab3a";
+tableColor2 = "#f0c169";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#e6983b;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#f0c169;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "Brown") {
+var brown1 = "#ded0b0";
+var brown2 = "#e9dbbb";
+var brown3 = "#bcaf91";
+tableColor2 = "#e9dbbb";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#ded0b0;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#e9dbbb;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "Black") {
+var black1 = "#171515";
+var black2 = "#2f2f2f";
+var black3 = "#686767";
+tableColor2 = "#2f2f2f"
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#171515;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#2f2f2f;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "None") {
+}
+} else if (tableDesign == "minimal") {
+tableCSS = "";
+if (tableColor == "Blue") {
+var blue3 = "#a9c6c9";
+tableColor2 = "#ffffff";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#ffffff;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "Green") {
+var green3 = "#9dcc7a";
+tableColor2 = "#ffffff";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #9dcc7a;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#abd28e;border-width: 1px;padding: 8px;border-style: solid;border-color: #9dcc7a;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#ffffff;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #9dcc7a;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "Grey") {
+var grey3 = "#a9a9a9";
+tableColor2 = "#ffffff";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #a9a9a9;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#b8b8b8;border-width: 1px;padding: 8px;border-style: solid;border-color: #a9a9a9;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#ffffff;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #a9a9a9;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "Orange") {
+var orange3 = "#e6983b";
+tableColor2 = "#ffffff";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#e6983b;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#ffffff;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "Brown") {
+var brown3 = "#ebab3a";
+tableColor2 = "#ffffff";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #bcaf91;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#ded0b0;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#ffffff;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #bcaf91;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "Black") {
+var black3 = "#ebab3a";
+tableColor2 = "#171515";
+tableCSS += '<style type="text/css">\n';
+tableCSS += 'table.tftable {font-size:12px;color:#fbfbfb;width:100%;border-width: 1px;border-color: #686767;border-collapse: collapse;}\n';
+tableCSS += 'table.tftable th {font-size:12px;background-color:#171515;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;text-align:left;}\n';
+tableCSS += 'table.tftable tr {background-color:#171515;}\n';
+tableCSS += 'table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #686767;}\n';
+tableCSS += '</style>\n\n';
+} else if (tableColor == "None") {
+}
+} else if (tableDesign == "alternatingXY") {
+tableCSS = "<!-- alternatingXY -->\n";
+} else if (tableDesign == "minimalXY") {
+tableCSS = "<!-- minimalXY -->\n";
+} else if (tableDesign == "noStyle") {
+tableCSS = "";
+}
+//Start table
+tableHTML = '<table id="tfhover" class="tftable" border="1">\n<tr>';
+//Make header
+var ii = 0;
+var iii = 0;
+var iiii = 0;
+while (ii < sizeCols) {
+iii = ii + 1;
+tableHTML += '<th>Header ' + iii + '</th>';
+ii++;
+}
+tableHTML += "</tr>\n";
+//make rows
+var i = 0;
+while (i < sizeRows - 1) {
+tableHTML = tableHTML + "<tr>";
+var ii = 0;
+while (ii < sizeCols) {
+iii = i + 1;
+iiii = ii + 1;
+if (tableInfo == "yesInfo") {
+tableHTML = tableHTML + "<td>Row:" + iii + " Cell:" + iiii + "</td>";
+} else {
+tableHTML = tableHTML + "<td> </td>";
+}
+ii++;
+}
+tableHTML = tableHTML + "</tr>\n";
+i++;
+}
+tableHTML += "</table>\n\n";
+//PREPARE A TABLE FOR DISPLAY ON THE PAGE
+if (tableInfo == "yesInfo") {
+pageTableHTML = '<table id="tfhover" class="tftable" border="1"><tbody><tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr><tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr><tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr><tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr><tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr><tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr><tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr></tbody></table>';
+} else {
+pageTableHTML = '<table id="tfhover" class="tftable" border="1"><tbody><tr><th> </th><th> </th><th> </th><th> </th><th> </th></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td></tr></tbody></table>';
+}
+tableEND = '<p><small>Created with the <a href="http://www.textfixer.com/html/html-table-generator.php" target="_blank">HTML Table Generator</a></small></p>';
+if (tableHighlight != "none") {
+if (tableColor != "None") {
+//Table Row Highlight
+if (tableColor2 == "#2f2f2f") {
+tfHighlightb = "#171515";
+tableColor2b = tableColor2;
+} else {
+tfHighlightb = "#ffffff";
+tableColor2b = tableColor2;
+}
+if (tableDesign == "minimal") {
+if (tableColor2 == "#171515") {
+tfHighlightb = "#565656";
+tableColor2b = tableColor2;
+} else {
+tfHighlightb = "#f3f8aa";
+tableColor2b = "#ffffff";
+}
+}
+}
+}
+if (tableHighlight == "none") {
+tableJS = "";
+} else if (tableHighlight == "row") {
+tableJS = "<!-- Row Highlight Javascript -->\n";
+//tableJS += "<script type=\"text/javascript\">\n";
+tableJS += " window.onload=function(){\n";
+tableJS += " var tfrow = document.getElementById('tfhover').rows.length;\n";
+tableJS += " var tbRow=[];\n";
+tableJS += " for (var i=1;i<tfrow;i++) {\n";
+tableJS += " tbRow[i]=document.getElementById('tfhover').rows[i];\n";
+tableJS += " tbRow[i].onmouseover = function(){\n";
+tableJS += " this.style.backgroundColor = '" + tfHighlightb + "';\n";
+tableJS += " };\n";
+tableJS += " tbRow[i].onmouseout = function() {\n";
+tableJS += " this.style.backgroundColor = '" + tableColor2b + "';\n";
+tableJS += " };\n";
+tableJS += " }\n";
+tableJS += "};\n"
+// tableJS += "< /script>\n\n";
+}
+newTable = tableCSS + pageTableHTML;
+newTableCode = tableJS + tableCSS + tableHTML + tableEND;
+document.getElementById('newTable').innerHTML = newTable;
+document.getElementById('newCode').value = newTableCode;
+if (tableHighlight != "none") {
+if (tableColor != "None") {
+//Table Row Highlight
+if (tableDesign == "minimal") {
+if (tableColor2 == "#171515") {
+tfHighlight = "#565656";
+} else {
+tfHighlight = "#f3f8aa";
+tableColor2 = "#ffffff";
+}
+} else {
+if (tableColor2 == "#2f2f2f") {
+tfHighlight = "#171515";
+} else {
+tfHighlight = "#ffffff";
+}
+}
+var tfrow = document.getElementById('tfhover').rows.length;
+var tbRow = [];
+for (var i = 1; i < tfrow; i++) {
+tbRow[i] = document.getElementById('tfhover').rows[i];
+tbRow[i].onmouseover = function () {
+this.style.backgroundColor = tfHighlight;
+};
+tbRow[i].onmouseout = function () {
+this.style.backgroundColor = tableColor2;
+};
+}
+}
+}
+}
+//Listener for sizeCols
+var el1 = document.getElementById('sizeCols');
+el1.onkeyup = function () {
+sizeCols = document.getElementById('sizeCols').value;
+sizeCols = sizeCols.replace(/[^0-9]+/g, '').replace(/\s+/, '');
+document.getElementById("sizeCols").value = sizeCols;
+makeTableCode();
+};
+//Listener for sizeRows
+var el2 = document.getElementById('sizeRows');
+el2.onkeyup = function () {
+sizeRows = document.getElementById("sizeRows").value;
+sizeRows = sizeRows.replace(/[^0-9]+/g, '').replace(/\s+/, '');
+document.getElementById("sizeRows").value = sizeRows;
+makeTableCode();
+};
+var el3 = document.getElementById('tableColor');
+el3.onchange = function () {
+tableColor = document.getElementById('tableColor').value;
+tableDesign = document.getElementById('tableDesign').value;
+if (tableColor == "None") {
+document.getElementById("tableDesign").selectedIndex = 2;
+}
+if (tableColor != "None" && tableDesign == "noStyle") {
+document.getElementById("tableDesign").selectedIndex = 0;
+}
+makeTableCode();
+};
+var el4 = document.getElementById('tableDesign');
+el4.onchange = function () {
+tableColor = document.getElementById('tableColor').value;
+tableDesign = document.getElementById('tableDesign').value;
+if (tableDesign == "noStyle") {
+document.getElementById("tableColor").selectedIndex = 6;
+}
+if (tableDesign != "noStyle" && tableColor == "None") {
+document.getElementById("tableColor").selectedIndex = 0;
+}
+makeTableCode();
+};
+var el5 = document.getElementById('tableHighlight');
+el5.onchange = function () {
+makeTableCode()
+};
+var el6 = document.getElementById('tableInfo');
+el6.onchange = function () {
+makeTableCode();
+};
+//intialize on entry
+makeTableCode();
+});
+</script></div>
+<script type="text/javascript">
+var canvas = document.getElementById("pychart");
+canvas.setAttribute('height', '0px');
+</script>
+
+</div>
+<div class="col-md-3">
+
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title"> 评价 </h3>
+</div>
+<div class="panel-body" style="font-size: x-small">
+<form>
+<div class="rating-container rating-xs rating-animate rating-disabled"><div class="clear-rating " title="Clear"><i class="glyphicon glyphicon-minus-sign"></i></div><div class="rating"><span class="empty-stars"><span class="star"><i class="glyphicon glyphicon-star-empty"></i></span><span class="star"><i class="glyphicon glyphicon-star-empty"></i></span><span class="star"><i class="glyphicon glyphicon-star-empty"></i></span><span class="star"><i class="glyphicon glyphicon-star-empty"></i></span><span class="star"><i class="glyphicon glyphicon-star-empty"></i></span></span><span class="filled-stars" style="width: 100%;"><span class="star"><i class="glyphicon glyphicon-star"></i></span><span class="star"><i class="glyphicon glyphicon-star"></i></span><span class="star"><i class="glyphicon glyphicon-star"></i></span><span class="star"><i class="glyphicon glyphicon-star"></i></span><span class="star"><i class="glyphicon glyphicon-star"></i></span></span></div><div class="caption"><span class="label label-success">Five Stars</span></div><input id="input-rating-infor" value="5.0" type="number" class="rating hide" min="0" max="5" step="0.2" data-size="xs" readonly="readonly"></div>
+<div class="clearfix padt10"></div>
+<div class="form-group">
+
+</div>
+</form>
+<script>
+jQuery(document).ready(function () {
+$(".rating-kv").rating();
+$('#input-rating-infor').on('rating.change', function (event, value, caption) {
+$.ajax({
+url: '/_rating/_update/sc909',
+type: 'POST',
+data: {rating: value},
+dataType: 'html',
+timeout: 1000,
+error: function () {
+alert('error')
+},
+success: function (result) {
+//alert('Score success.')
+}
+});
+});
+});
+</script>
+
+</div>
+</div>
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title"> 相关App </h3>
+</div>
+<ul class="list-group" style="overflow: hidden;">
+
+<li class="list-group-item" style="overflow: hidden;">
+<a href="http://www.osgeo.cn/app/sb149">
+<span class="glyphicon glyphicon-play-circle"></span> 在线UBB/HTML转换
+</a>
+</li>
+
+<li class="list-group-item" style="overflow: hidden;">
+<a href="http://www.osgeo.cn/app/s2638">
+<span class="glyphicon glyphicon-play-circle"></span> 显示器对角线尺寸与厘米英寸分辨率在线转换关系
+</a>
+</li>
+
+<li class="list-group-item" style="overflow: hidden;">
+<a href="http://www.osgeo.cn/app/s2705">
+<span class="glyphicon glyphicon-play-circle"></span> 斐波那契数列在线计算器
+</a>
+</li>
+
+<li class="list-group-item" style="overflow: hidden;">
+<a href="http://www.osgeo.cn/app/s2841">
+<span class="glyphicon glyphicon-play-circle"></span> 二进制乘法在线计算器
+</a>
+</li>
+
+<li class="list-group-item" style="overflow: hidden;">
+<a href="http://www.osgeo.cn/app/sc118">
+<span class="glyphicon glyphicon-play-circle"></span> 在线编码转换URL编码URL解码
+</a>
+</li>
+
+<li class="list-group-item" style="overflow: hidden;">
+<a href="http://www.osgeo.cn/app/s2842">
+<span class="glyphicon glyphicon-play-circle"></span> 二进制减法在线计算器
+</a>
+</li>
+
+<li class="list-group-item" style="overflow: hidden;">
+<a href="http://www.osgeo.cn/app/sc902">
+<span class="glyphicon glyphicon-play-circle"></span> URL在线转换为链接
+</a>
+</li>
+
+<li class="list-group-item" style="overflow: hidden;">
+<a href="http://www.osgeo.cn/app/s2791">
+<span class="glyphicon glyphicon-play-circle"></span> 计算机KB和GB单位的在线换算器
+</a>
+</li>
+
+
+</ul>
+</div>
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title">
+App分类
+</h3>
+</div>
+<ul class="list-group list-font">
+<li class="list-group-item">
+
+
+
+
+
+<a href="http://www.osgeo.cn/category/algebra" title="代数计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+代数计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/geometry" title="几何计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+几何计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/triangle" title="三角函数计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+三角函数计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/gailv" title="概率统计" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+概率统计
+</a>
+
+
+
+
+
+
+<a href="http://www.osgeo.cn/category/electric" title="电力计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+电力计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/dianzi" title="电子计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+电子计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/jdwl" title="经典物理" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+经典物理
+</a>
+
+
+
+
+
+
+<a href="http://www.osgeo.cn/category/element" title="分子原子" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+分子原子
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/reaction" title="化学反应" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+化学反应
+</a>
+
+
+
+
+
+
+<a href="http://www.osgeo.cn/category/health" title="健康计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+健康计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/shgj" title="生活工具" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+生活工具
+</a>
+
+
+
+
+
+
+<a href="http://www.osgeo.cn/category/date_time" title="时间日期换算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+时间日期换算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/length" title="长度角度面积体积" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+长度角度面积体积
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/sdsl" title="速度速率换算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+速度速率换算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/weight" title="质量重量压力换算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+质量重量压力换算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/glnl" title="功率、能量单位换算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+功率、能量单位换算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/qths" title="其他换算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+其他换算
+</a>
+
+
+
+
+
+
+<a href="http://www.osgeo.cn/category/caiwu" title="财务计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+财务计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/insurance" title="保险计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+保险计算
+</a>
+
+
+
+
+
+
+<a href="http://www.osgeo.cn/category/computer" title="计算机" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+计算机
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/web" title="Web计算与工具" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+Web计算与工具
+</a>
+
+
+
+
+
+
+<a href="http://www.osgeo.cn/category/meterail" title="材料计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+材料计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/jixie" title="机械计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+机械计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/struct" title="建筑计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+建筑计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/shuili" title="水力计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+水力计算
+</a>
+
+
+
+
+
+
+<a href="http://www.osgeo.cn/category/geo" title="地理计算与工具" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+地理计算与工具
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/cehui" title="测绘计算与工具" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+测绘计算与工具
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/senvi" title="环境计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+环境计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/eia" title="环评计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+环评计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/daqi" title="大气计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+大气计算
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/agro" title="农业计算" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+农业计算
+</a>
+
+
+
+
+
+
+<a href="http://www.osgeo.cn/category/leafletjs" title="LeafletJS" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+LeafletJS
+</a>
+
+
+
+<a href="http://www.osgeo.cn/category/openlayers" title="OpenLayers" class=" btn-primary btn-sm" style="margin-bottom: 5px;color: #fff;">
+OpenLayers
+</a>
+
+
+</li>
+
+</ul>
+</div>
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title"> 最近使用 </h3>
+</div>
+<ul class="list-group">
+
+
+<li class="list-group-item">
+<a href="http://www.osgeo.cn/app/sc453" title="斜抛运动水平射程（位移距离）在线计算器">
+
+<span class="glyphicon glyphicon-map-marker"></span>
+
+斜抛运动水平射程（位移距离）在线计算器
+
+</a>
+
+</li>
+
+<li class="list-group-item">
+<a href="http://www.osgeo.cn/app/s3216" title="地形图分幅编号查询与浏览在线工具">
+
+<span class="glyphicon glyphicon-map-marker"></span>
+
+地形图分幅编号查询与浏览在线工具
+
+</a>
+
+</li>
+
+<li class="list-group-item">
+<a href="http://www.osgeo.cn/app/s1904" title="太阳高度角、太阳方位角在线计算器">
+
+<span class="glyphicon glyphicon-map-marker"></span>
+
+太阳高度角、太阳方位角在线计算器
+
+</a>
+
+</li>
+
+<li class="list-group-item">
+<a href="http://www.osgeo.cn/app/sca70" title="抛物线方程求解在线计算器">
+
+<span class="glyphicon glyphicon-map-marker"></span>
+
+抛物线方程求解在线计算器
+
+</a>
+
+</li>
+
+<li class="list-group-item">
+<a href="http://www.osgeo.cn/app/s2711" title="在线判断质数（素数）">
+
+<span class="glyphicon glyphicon-map-marker"></span>
+
+在线判断质数（素数）
+
+</a>
+
+</li>
+
+
+
+</ul>
+</div>
+<div class="panel panel-info">
+<div class="panel-heading">
+<h3 class="panel-title"> 使用最多 </h3>
+</div>
+<ul class="list-group">
+
+
+<li class="list-group-item">
+<a href="http://www.osgeo.cn/app/scb25" title="三角函数反三角函数在线计算器">
+
+<span class="glyphicon glyphicon-map-marker"></span>
+
+三角函数反三角函数在线计算器
+
+</a>
+
+</li>
+
+<li class="list-group-item">
+<a href="http://www.osgeo.cn/app/s2639" title="人体体表面积(BSA)在线计算器">
+
+<span class="glyphicon glyphicon-map-marker"></span>
+
+人体体表面积(BSA)在线计算器
+
+</a>
+
+</li>
+
+<li class="list-group-item">
+<a href="http://www.osgeo.cn/app/scb06" title="Arctan反正切函数在线计算">
+
+<span class="glyphicon glyphicon-map-marker"></span>
+
+Arctan反正切函数在线计算
+
+</a>
+
+</li>
+
+<li class="list-group-item">
+<a href="http://www.osgeo.cn/app/sb123" title="sin, cos, tan, cot, sec, cosec三角函数计算器_在线计算工具">
+
+<span class="glyphicon glyphicon-map-marker"></span>
+
+sin, cos, tan, cot, sec, cosec三角函数计算器_在线计算工具
+
+</a>
+
+</li>
+
+<li class="list-group-item">
+<a href="http://www.osgeo.cn/app/sc263" title="商和余数在线计算器">
+
+<span class="glyphicon glyphicon-map-marker"></span>
+
+商和余数在线计算器
+
+</a>
+
+</li>
+
+
+
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+</div>
+<div class="container-fluid foot-wrap">
+<div class="container">
+<div class="row">
+<div class="row-content col-sm-3">
+<h3> 文档中心</h3>
+<ul>
+<li><a href="http://www.osgeo.cn/gis_tutorial/" target="_blank">地理信息系统基础原理</a></li>
+<li><a href="http://www.osgeo.cn/doc_pycsw/" target="_blank">pycsw中文文档（翻译）</a></li>
+<li><a href="http://www.osgeo.cn/grass_tutorial/" target="_blank">GRASS GIS中文教程</a></li>
+<li><a href="http://www.osgeo.cn/osgeo-live/" target="_blank">OSGeo Live中文文档</a></li>
+<li>
+<a href="http://www.osgeo.cn/python_gdal_utah_tutorial/" target="_blank">
+犹他州立大学Python GDAL课程笔记
+</a>
+</li>
+</ul>
+</div>
+<div class="row-content col-sm-3">
+<h3>链接</h3>
+<ul>
+<li><a href="http://www.osgeo.cn/page/about">关于</a></li>
+<li><a href="http://www.osgeo.cn/page/tutorial">教程</a></li>
+<li><a href="http://www.osgeo.cn/page/documents">文档</a></li>
+<li><a href="http://www.osgeo.cn/page/contact">联系方式</a></li>
+<li><a href="http://www.osgeo.cn/page/intro_cn">实验室介绍</a></li>
+<li><a href="http://www.osgeo.cn/page/introduction">Introduction</a>
+</li></ul>
+<h3>联系方式</h3>
+<ul>
+<li><a>Email: bukun#osgeo.cn </a></li>
+</ul>
+</div>
+<div class="row-content col-sm-6">
+<h3>OSGeo项目</h3>
+<div class="row-content col-sm-4">
+<h4><span class="glyphicon glyphicon-list"></span> Web制图</h4>
+<ul>
+<li><a href="http://www.osgeo.cn/page/deegree">Deegree</a></li>
+<li><a href="http://www.osgeo.cn/page/geomajas">Geomajas</a></li>
+<li><a href="http://www.osgeo.cn/page/geomoose">GeoMoose</a>/li&gt;
+</li><li><a href="http://www.osgeo.cn/page/geoserver">GeoServer</a></li>
+<li><a href="http://www.osgeo.cn/page/mapbender">Mapbender</a></li>
+<li><a href="http://www.osgeo.cn/page/mapbuilder">MapBuilder</a></li>
+<li><a href="http://www.osgeo.cn/page/mapfish">MapFish</a></li>
+<li><a href="http://www.osgeo.cn/page/mapguide_os">MapGuide Open Source</a></li>
+<li><a href="http://www.osgeo.cn/page/mapserver">MapServer</a></li>
+<li><a href="http://www.osgeo.cn/page/openlayers">OpenLayers</a></li>
+</ul>
+<h4><span class="glyphicon glyphicon-list"></span> 元数据目录 </h4>
+<ul>
+<li><a href="http://www.osgeo.cn/page/geonetwork">GeoNetwork</a></li>
+<li><a href="http://www.osgeo.cn/page/pycsw">pycsw</a></li>
+</ul>
+</div>
+<div class="row-content col-sm-4">
+<h4><span class="glyphicon glyphicon-list"></span> 内容管理系统</h4>
+<ul>
+<li><a href="http://www.osgeo.cn/page/geonode">GeoNode</a></li>
+</ul>
+<h4><span class="glyphicon glyphicon-list"></span> 开发类库</h4>
+<ul>
+<li><a href="http://www.osgeo.cn/page/fdo">FDO</a></li>
+<li><a href="http://www.osgeo.cn/page/gdal">GDAL/OGR</a></li>
+<li><a href="http://www.osgeo.cn/page/geos">GEOS</a></li>
+<li><a href="http://www.osgeo.cn/page/geotools">GeoTools</a></li>
+<li><a href="http://www.osgeo.cn/page/ossim">OSSIM</a></li>
+<li><a href="http://www.osgeo.cn/page/postgis">PostGIS</a></li>
+</ul>
+<h4><span class="glyphicon glyphicon-list"></span> 扩展项目 </h4>
+<ul>
+<li><a href="http://www.osgeo.cn/page/public_geospatial_data">开放地理空间数据</a></li>
+<li><a href="http://www.osgeo.cn/page/education_and_curriculum">教育及培训</a></li>
+<li><a href="http://www.osgeo.cn/page/osgeo_live">OSGeo Live</a></li>
+</ul>
+</div>
+<div class="row-content col-sm-4">
+<h4><span class="glyphicon glyphicon-list"></span> 桌面应用</h4>
+<ul>
+<li><a href="http://www.osgeo.cn/page/grass">GRASS GIS</a></li>
+<li><a href="http://www.osgeo.cn/page/marble">Marble</a></li>
+<li><a href="http://www.osgeo.cn/page/qgis">QGIS</a></li>
+</ul>
+<h4><span class="glyphicon glyphicon-list"></span> 孕育项目</h4>
+<ul>
+<li><a href="http://www.osgeo.cn/page/zoo_project">ZOO-Project</a></li>
+<li><a href="http://www.osgeo.cn/page/team_engine">Team Engine</a></li>
+<li><a href="http://www.osgeo.cn/page/gvsig">gvSIG</a></li>
+<li><a href="http://www.osgeo.cn/page/opticks">Opticks</a></li>
+<li><a href="http://www.osgeo.cn/page/pycsw">pycsw</a></li>
+<li><a href="http://www.osgeo.cn/page/metacrs">MetaCRS</a></li>
+<li><a href="http://www.osgeo.cn/page/orfeo_toolbox">ORFEO Toolbox(OTB)</a></li>
+<li><a href="http://www.osgeo.cn/page/rasdaman">rasdaman</a></li>
+</ul>
+</div>
+</div>
+</div>
+<p align="center" style="margin-top: 20px;color:#878B91;">Copyright © 2014-2017
+<a href="http://www.osgeo.cn/">OSGeo中国中心</a> 吉ICP备05002032号</p>
+<p align="center" style="margin-top: 20px;color:#878B91;">Powered by
+<a href="https://github.com/bukun/TorCMS" target="_blank">TorCMS</a></p>
+</div>
+</div>
+
+<script src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/MathJax.js.下载" id=""></script>
+<script type="text/javascript" src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/gscript.js.下载"></script>
+<script>
+(function (i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r;
+i[r] = i[r] || function () {
+(i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date();
+a = s.createElement(o),
+m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-97124616-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+var _paq = _paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+var u="//121.42.45.218/piwik/";
+_paq.push(['setTrackerUrl', u+'piwik.php']);
+_paq.push(['setSiteId', '3']);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+})();
+</script>
+<!-- End Piwik Code -->
+
+
+<iframe frameborder="0" id="bdSharePopup_selectshare1514822221825bg" class="bdselect_share_bg" style="top: 492px; left: 623px; display: none; width: 204px; height: 104px;" src="./在线HTML表格生成工具 自定义HTML表格,在线计算,在线计算器,计算器在线计算_files/saved_resource.html"></iframe><div id="bdSharePopup_selectshare1514822221825box" style="top: 492px; left: 623px; display: none; width: 204px;" share-type="selectshare" class="bdselect_share_box" data-bd-bind="1514822221825"><div class="selectshare-mod-triangle"><div class="triangle-border"></div><div class="triangle-inset"></div></div><div class="bdselect_share_head" style="width: 204px;"><span>分享到</span><a href="http://www.baidu.com/s?wd=%3C!--%20Row%20Highlight%20Javascript%20--%3E%20window.onload=function(){%20var%20tfrow%20=%20document.getElementById(%27tfhover%27).rows.length;%20var%20tbRow=[];%20for%20(var%20i=1;i%3Ctfrow;i++)%20{%20tbRow[i]=document.getElementById(%27tfhover%27).rows[i];%20tbRow[i].onmouseover%20=%20function(){%20this.style.backgroundColor%20=%20%27#ffffff&#39;; }; tbRow[i].onmouseout = function() { this.style.backgroundColor = &#39;#d4e3e5&#39;; }; }};&lt;style type=&quot;text/css&quot;&gt;table.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}table.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}table.tftable tr {background-color:#d4e3e5;}table.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}&lt;/style&gt;&lt;table id=&quot;tfhover&quot; class=&quot;tftable&quot; border=&quot;1&quot;&gt;&lt;tr&gt;&lt;th&gt;Header 1&lt;/th&gt;&lt;th&gt;Header 2&lt;/th&gt;&lt;th&gt;Header 3&lt;/th&gt;&lt;th&gt;Header 4&lt;/th&gt;&lt;th&gt;Header 5&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Row:1 Cell:1&lt;/td&gt;&lt;td&gt;Row:1 Cell:2&lt;/td&gt;&lt;td&gt;Row:1 Cell:3&lt;/td&gt;&lt;td&gt;Row:1 Cell:4&lt;/td&gt;&lt;td&gt;Row:1 Cell:5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Row:2 Cell:1&lt;/td&gt;&lt;td&gt;Row:2 Cell:2&lt;/td&gt;&lt;td&gt;Row:2 Cell:3&lt;/td&gt;&lt;td&gt;Row:2 Cell:4&lt;/td&gt;&lt;td&gt;Row:2 Cell:5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Row:3 Cell:1&lt;/td&gt;&lt;td&gt;Row:3 Cell:2&lt;/td&gt;&lt;td&gt;Row:3 Cell:3&lt;/td&gt;&lt;td&gt;Row:3 Cell:4&lt;/td&gt;&lt;td&gt;Row:3 Cell:5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Row:4 Cell:1&lt;/td&gt;&lt;td&gt;Row:4 Cell:2&lt;/td&gt;&lt;td&gt;Row:4 Cell:3&lt;/td&gt;&lt;td&gt;Row:4 Cell:4&lt;/td&gt;&lt;td&gt;Row:4 Cell:5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Row:5 Cell:1&lt;/td&gt;&lt;td&gt;Row:5 Cell:2&lt;/td&gt;&lt;td&gt;Row:5 Cell:3&lt;/td&gt;&lt;td&gt;Row:5 Cell:4&lt;/td&gt;&lt;td&gt;Row:5 Cell:5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Row:6 Cell:1&lt;/td&gt;&lt;td&gt;Row:6 Cell:2&lt;/td&gt;&lt;td&gt;Row:6 Cell:3&lt;/td&gt;&lt;td&gt;Row:6 Cell:4&lt;/td&gt;&lt;td&gt;Row:6 Cell:5&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;small&gt;Created with the &lt;a href=&quot;http://www.textfixer.com/html/html-table-generator.php&quot; target=&quot;_blank&quot;&gt;HTML Table Generator&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;&amp;tn=SE_hldp08010_vurs2xrp" class="bdselect_share_dialog_search" target="_blank"><i class="bdselect_share_dialog_search_i"></i><span class="bdselect_share_dialog_search_span" style="display: none;">百度一下</span></a><a class="bdselect_share_dialog_close"></a></div><div class="bdselect_share_content"><ul class="bdselect_share_list bdshare-button-style0-16"><div class="bdselect_share_partners"><a href="http://www.osgeo.cn/app/sc909#" class="bds_weixin" data-cmd="weixin"></a><a href="http://www.osgeo.cn/app/sc909#" class="bds_fbook" data-cmd="fbook"></a><a href="http://www.osgeo.cn/app/sc909#" class="bds_linkedin" data-cmd="linkedin"></a><a href="http://www.osgeo.cn/app/sc909#" class="bds_twi" data-cmd="twi"></a><a href="http://www.osgeo.cn/app/sc909#" class="bds_mail" data-cmd="mail"></a><a href="http://www.osgeo.cn/app/sc909#" class="bds_evernotecn" data-cmd="evernotecn"></a><a href="http://www.osgeo.cn/app/sc909#" class="bds_print" data-cmd="print"></a></div><a href="http://www.osgeo.cn/app/sc909#" class="bds_more" data-cmd="more"></a></ul></div></div><div id="bdimgshare_1514822221829" class="sr-bdimgshare sr-bdimgshare-list sr-bdimgshare-16 sr-bdimgshare-black" style="height:36px;line-height:26px;font-size:12px;width:autopx;display:none;" data-bd-bind="1514822221829"><div class="bdimgshare-bg"></div><div class="bdimgshare-content bdsharebuttonbox bdshare-button-style0-16"><label class="bdimgshare-lbl">分享到：</label><a href="http://www.osgeo.cn/app/sc909#" onclick="return false;" class="bds_weixin" data-cmd="weixin" hidefocus=""></a><a href="http://www.osgeo.cn/app/sc909#" onclick="return false;" class="bds_fbook" data-cmd="fbook" hidefocus=""></a><a href="http://www.osgeo.cn/app/sc909#" onclick="return false;" class="bds_linkedin" data-cmd="linkedin" hidefocus=""></a><a href="http://www.osgeo.cn/app/sc909#" onclick="return false;" class="bds_twi" data-cmd="twi" hidefocus=""></a><a href="http://www.osgeo.cn/app/sc909#" onclick="return false;" class="bds_mail" data-cmd="mail" hidefocus=""></a><a href="http://www.osgeo.cn/app/sc909#" onclick="return false;" class="bds_evernotecn" data-cmd="evernotecn" hidefocus=""></a><a href="http://www.osgeo.cn/app/sc909#" onclick="return false;" class="bds_print" data-cmd="print" hidefocus=""></a><a href="http://www.osgeo.cn/app/sc909#" onclick="return false;" class="bds_more" data-cmd="more" hidefocus=""></a></div></div></body></html>
