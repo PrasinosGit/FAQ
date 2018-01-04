@@ -1,160 +1,94 @@
-1 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-  2 <html>
-  3  <head>
-  4   <title> 实现表格隔行变色 </title>
-  5   <meta http-equiv="Content-Type" content="text/html; chartset=GBK" />
-  6   <script src="http://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
-  7   <style type="text/css">
-  8     body{font-size:12px;text-align:center}
-  9     #tbStu{width:90%;border:solid 1px #666;background-color:#eee}
- 10     #tbStu tr{line-height:23px}
- 11     #tbStu tr th{background-color:#ccc;color:#fff}
- 12     #tbStu .trOdd{background-color:#fff}
- 13   </style>
- 14 
- 15     <script>
- 16         $(function(){
- 17             $("#tbStu tr:nth-child(even)").addClass("trOdd");}
- 18         )
- 19 
- 20     
- 21     </script>
- 22 
- 23  </head>
- 24  <body>
- 25 
- 26     <table id="tbStu" cellpadding="0" cellspacing="0">
- 27         
- 28         <tbody>
- 29             
- 30             <tr>
- 31                 <th>学号</th>
- 32                 <th>姓名</th>
- 33                 <th>性别</th>
- 34                 <th>总分</th>
- 35             </tr>
- 36 
- 37             <tr>
- 38                 <td>1001</td>
- 39                 <td>张晓明</td>
- 40                 <td>男</td>
- 41                 <td>98</td>
- 42             </tr>
- 43 
- 44             <tr>
- 45                 <td>1002</td>
- 46                 <td>李小强</td>
- 47                 <td>男</td>
- 48                 <td>88</td>
- 49             </tr>
- 50 
- 51             <tr>
- 52                 <td>1003</td>
- 53                 <td>张小花</td>
- 54                 <td>女</td>
- 55                 <td>88</td>
- 56             </tr>
- 57 
- 58             <tr>
- 59                 <td>1004</td>
- 60                 <td>李小妞</td>
- 61                 <td>女</td>
- 62                 <td>88</td>
- 63             </tr>
- 64 
- 65             <tr>
- 66                 <td>1001</td>
- 67                 <td>张晓明</td>
- 68                 <td>男</td>
- 69                 <td>98</td>
- 70             </tr>
- 71 
- 72             <tr>
- 73                 <td>1002</td>
- 74                 <td>李小强</td>
- 75                 <td>男</td>
- 76                 <td>88</td>
- 77             </tr>
- 78 
- 79             <tr>
- 80                 <td>1003</td>
- 81                 <td>张小花</td>
- 82                 <td>女</td>
- 83                 <td>88</td>
- 84             </tr>
- 85 
- 86             <tr>
- 87                 <td>1004</td>
- 88                 <td>李小妞</td>
- 89                 <td>女</td>
- 90                 <td>88</td>
- 91             </tr>
- 92 
- 93             <tr>
- 94                 <td>1001</td>
- 95                 <td>张晓明</td>
- 96                 <td>男</td>
- 97                 <td>98</td>
- 98             </tr>
- 99 
-100             <tr>
-101                 <td>1002</td>
-102                 <td>李小强</td>
-103                 <td>男</td>
-104                 <td>88</td>
-105             </tr>
-106 
-107             <tr>
-108                 <td>1003</td>
-109                 <td>张小花</td>
-110                 <td>女</td>
-111                 <td>88</td>
-112             </tr>
-113 
-114             <tr>
-115                 <td>1004</td>
-116                 <td>李小妞</td>
-117                 <td>女</td>
-118                 <td>88</td>
-119             </tr>
-120 
-121             <tr>
-122                 <td>1001</td>
-123                 <td>张晓明</td>
-124                 <td>男</td>
-125                 <td>98</td>
-126             </tr>
-127 
-128             <tr>
-129                 <td>1002</td>
-130                 <td>李小强</td>
-131                 <td>男</td>
-132                 <td>88</td>
-133             </tr>
-134 
-135             <tr>
-136                 <td>1003</td>
-137                 <td>张小花</td>
-138                 <td>女</td>
-139                 <td>88</td>
-140             </tr>
-141 
-142             <tr>
-143                 <td>1004</td>
-144                 <td>李小妞</td>
-145                 <td>女</td>
-146                 <td>88</td>
-147             </tr>
-148 
-149 
-150         
-151         </tbody>
-152     
-153     
-154     </table>
-155   
-156  </body>
-157 </html>
+<div>&nbsp;&lt;div id="tabksxx" class="tab-pane fade active in"&gt; &lt;table class="table table-striped table-condensed"&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;考试科目&lt;/th&gt; &lt;th&gt;考试成绩&lt;/th&gt; &lt;th&gt;是否合格&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &nbsp; &lt;tbody&gt;&lt;tr&gt; &lt;td&gt;科目一&lt;/td&gt; &lt;td&gt;92&lt;/td&gt; &lt;td&gt; &nbsp;&lt;span class="label label-success"&gt; 合格 &lt;/span&gt; &nbsp; &lt;/td&gt; &lt;/tr&gt; &nbsp;&lt;tr&gt; &lt;td&gt;科目二&lt;/td&gt; &lt;td&gt;80&lt;/td&gt; &lt;td&gt; &nbsp; &lt;span class="label label-success"&gt;合格&lt;/span&gt; &nbsp;&lt;/td&gt; &lt;/tr&gt; &nbsp;&lt;tr&gt; &lt;td&gt;科目三 道路驾驶技能考试&lt;/td&gt; &lt;td&gt;90&lt;/td&gt; &lt;td&gt; &nbsp; &lt;span class="label label-success"&gt;合格&lt;/span&gt; &nbsp;&lt;/td&gt; &lt;/tr&gt; &nbsp; &lt;/tbody&gt;&lt;/table&gt; &lt;/div&gt;<br/>
+<br/>
+<br/>
+whois监控<br/>
+<br/>
+
+<div>122.gov.cn域名信息查询</div>
+
+<div>[Querying whois.cnnic.cn]</div>
+
+<div>[whois.cnnic.cn]</div>
+
+<div>Domain Name: 122.gov.cn</div>
+
+<div>ROID: 20111213s10061s02132518-cn</div>
+
+<div>Domain Status: ok</div>
+
+<div>Registrant ID: hc-240730846-cn</div>
+
+<div>Registrant: 公安部交通管理局</div>
+
+<div>Registrant Contact Email: 312488520@qq.com</div>
+
+<div>Sponsoring Registrar: 阿里云计算有限公司（万网）</div>
+
+<div>Name Server: dns21.hichina.com</div>
+
+<div>Name Server: dns22.hichina.com</div>
+
+<div>Registration Time: 2011-12-13 17:28:21</div>
+
+<div>Expiration Time: 2025-02-18 17:03:26</div>
+
+<div>DNSSEC: unsigned</div>
+
+<div>以上信息更新时间：2017-09-16 18:05:39 立即更新<br/>
+<span><br/>
+&nbsp;</span>Ip地址：58.214.240.91</div>
+
+<div><br/>
+</div>
+
+<div>域名：<span style="white-space:pre"></span>122.gov.cn</div>
+
+<div>注册人(机构)：<span style="white-space:pre"></span></div>
+
+<div>China NIC</div>
+
+<div>参照页：<span style="white-space:pre"></span></div>
+
+<div><a href="http://www.cnnic.net.cn" target="_blank">http://www.cnnic.net.cn</a></div>
+
+<div>持有人/机构名称：<span style="white-space:pre"></span></div>
+
+<div>公安部交通管理局</div>
+
+<div>持有人/邮箱：<span style="white-space:pre"></span></div>
+
+<div>312488520@qq.com</div>
+
+<div>注册时间：<span style="white-space:pre"></span></div>
+
+<div>2011-12-13</div>
+
+<div>到期时间：<span style="white-space:pre"></span></div>
+
+<div>2025-02-18</div>
+
+<div>更新时间：<span style="white-space:pre"></span></div>
+
+<div>2017-08-15</div>
+
+<div>域名服务器：<span style="white-space:pre"></span></div>
+
+<div>whois.cnnic.cn</div>
+
+<div>DNS服务器：<span style="white-space:pre"></span></div>
+
+<div>dns21.hichina.com-140.205.81.27</div>
+
+<div>dns22.hichina.com-140.205.81.28</div>
+
+<div>域名状态：<span style="white-space:pre"></span></div>
+
+<div>默认的正常状态</div>
+<br/>
+<br/>
+<br/>
+</div>
+
 
 http://www.kukuzy.com/?m=vod-type-id-16-pg-13.html
 
