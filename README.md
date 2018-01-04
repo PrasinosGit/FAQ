@@ -17,3 +17,27 @@ http://www.bbci.de
 
 [3]  THE BLUE BRAIN PROJECT - A SWISS BRAIN INITIATIVE  ．Bluebrain | EPFL
 https://bluebrain.epfl.ch/
+
+
+wiki
+CNSpan Institution
+
+Quality. Independence. Impact
+
+Institution: CNSpan Institution
+<nowiki>Insert non-formatted text here</nowiki>
+
+
+==See also==
+
+[1] Bundesministerium für Bildung und Forschung - BMBF．bmbf https://www.bmbf.de
+
+[2] Berlin Brain-Computer Interface (BBCI)．bbci http://www.bbci.de
+
+[3] THE BLUE BRAIN PROJECT - A SWISS BRAIN INITIATIVE ．Bluebrain | EPFL https://bluebrain.epfl.ch/
+
+==See also==
+
+* [[German Historical Institute]]s
+* [[Perspectivia.net]]
+* [[Kultusministerkonferenz]] (Conference of Ministers of Education (State Government in Germany))
